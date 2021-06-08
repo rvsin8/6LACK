@@ -5,18 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-ChannelMembership.delete_all
-User.delete_all
-Channel.delete_all
-#Message.delete_all
-UserMessage.delete_all
-
-sixlack = User.create!(username: "ricardo", password: "prettylittlefears", email: "sixlack@interscope.com")
-jermaine = User.create!(username: "jcole", password: "loveyourz", email: "jcole@dreamville.com")
-future = User.create!(username: "futurehxndrxx", password: "maskoff", email: "hndrxx@epicrecords.com")
-aubrey = User.create!(username: "drake", password: "popstar", email: "drizzy@ovo.com")
-khalid = User.create!(username: "khalid", password: "location", email: "khalid@rca.com")
-sean = User.create!(username: "jayz", password: "blueprint", email: "hov@rocafella.com")
+#ChannelMembership.delete_all
+#User.delete_all
+#Channel.delete_all
+##Message.delete_all
+#UserMessage.delete_all
+#
+#sixlack = User.create!(username: "ricardo", password: "prettylittlefears", email: "sixlack@interscope.com")
+#jermaine = User.create!(username: "jcole", password: "loveyourz", email: "jcole@dreamville.com")
+#future = User.create!(username: "futurehxndrxx", password: "maskoff", email: "hndrxx@epicrecords.com")
+#aubrey = User.create!(username: "drake", password: "popstar", email: "drizzy@ovo.com")
+#khalid = User.create!(username: "khalid", password: "location", email: "khalid@rca.com")
+#sean = User.create!(username: "jayz", password: "blueprint", email: "hov@rocafella.com")
 
 
 #M
@@ -40,16 +40,16 @@ sean = User.create!(username: "jayz", password: "blueprint", email: "hov@rocafel
 c1 = Channel.create!(
     title: 'General',
     channel_type: 'public',
-    channel_or_dm: 'channel',
+   
     created_at: '1/1/2021',
     updated_at: '1/1/2021',
-    description: 'who would you work with?'
+    
 )
         
 c2 = Channel.create!(
     title: 'Atlantic Records',
     channel_type: 'public',
-    channel_or_dm: 'channel',
+   
     created_at: '1/1/2021',
     updated_at: '1/1/2021',
     description: 'Aretha Franklin & Led Zeppelin fan club.'
@@ -58,7 +58,7 @@ c2 = Channel.create!(
 c3 = Channel.create!(
     title: 'Interscope Records',
     channel_type: 'public',
-    channel_or_dm: 'channel',
+   
     created_at: '1/1/2021',
     updated_at: '1/1/2021',
     description: 'I actually went to school with Ella Mai.'
@@ -68,7 +68,7 @@ c3 = Channel.create!(
 c4 = Channel.create!(
     title: 'Roc-A-Fella',
     channel_type: 'public',
-    channel_or_dm: 'channel',
+   
     created_at: '1/1/2021',
     updated_at: '1/1/2021',
     description: 'As active as Jay-Z on twitter.'
@@ -77,7 +77,7 @@ c4 = Channel.create!(
 c5 = Channel.create!(
     title: 'Def Jam',
     channel_type: 'public',
-    channel_or_dm: 'channel',
+   
     created_at: '1/1/2021',
     updated_at: '1/1/2021',
     description: 'They really had a videogame.'
