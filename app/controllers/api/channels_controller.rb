@@ -9,7 +9,7 @@ class Api::ChannelsController < ApplicationController
 
     def create
         @channel = Channel.new(channel_params)
-        if @channel.save
+#        if @channel.save
             if @channel.channel_or_dm == 'channel'
                 if @channel.channel_type == 'public'
                     @channel.users << User.all
@@ -23,9 +23,9 @@ class Api::ChannelsController < ApplicationController
             @channel.users << current_user
             end
             render 'api/channels/show'
-        else
-            render json: @channel.errors.full_messages, status: 422
-        end
+       # else
+        #    render json: @channel.errors.full_messages, status: 422
+       # end
     end
 
     def show
