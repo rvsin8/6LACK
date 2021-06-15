@@ -20,7 +20,7 @@ class ChannelSidebarItem extends React.Component {
         return (
           <li className="channel-li-current">
             <Link to={`/channels/${this.props.channel.id}`}>
-              {prefix} {this.props.channel.title}
+              {prefix} {this.props.channel.title} 
             </Link>
           </li>
         );
@@ -28,16 +28,16 @@ class ChannelSidebarItem extends React.Component {
         return (
           <li className="channel-li">
             <Link to={`/channels/${this.props.channel.id}`}>
-              {prefix} {this.props.channel.title}
+              {prefix} {this.props.channel.title} 
             </Link>
           </li>
         );
       }
     } else { //if it's a dm
-      
+
       const channelDisplayTitle = this.props.channel.title
         .split(", ")
-        .filter((user) => user !== this.props.currentUser.email)
+        // .filter((user) => user !== this.props.currentUser.email)
         .join(", ");
 
       if (this.props.currentChannelId == this.props.channel.id) { //and it's the currently-selected dm
@@ -60,10 +60,10 @@ class ChannelSidebarItem extends React.Component {
             </li>
           );
         }
-        
+
       } else { //if it's not the currently-selected dm
-        if (this.props.onlineStatus){ // and the person is online
-          return(
+        if (this.props.onlineStatus) { // and the person is online
+          return (
             <li className="dm-li">
               <Link to={`/channels/${this.props.channel.id}`}>
                 <i className="fas fa-circle"></i>&nbsp;{" "}
@@ -80,8 +80,8 @@ class ChannelSidebarItem extends React.Component {
             </li>
           );
         }
-        
-        
+
+
       }
     }
   }

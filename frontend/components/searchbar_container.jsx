@@ -9,18 +9,18 @@ const msp = state => {
         currentUser: state.session.user,
         channels: state.entities.channels,
         messages: state.entities.messages,
-        //currentUserEmail: state.entities.users[state.session.user.id].email
-    }
-}
+       // currentUserEmail: state.entities.users[state.session.user.id].email
+    };
+};
 
 const mdp = dispatch => {
     
     return{
         openModal: () => dispatch(openModal()),
         closeModal: () => dispatch(closeModal())
-    }
+    };
 
-}
+};
 
 export default connect(msp,mdp)(Searchbar);
 

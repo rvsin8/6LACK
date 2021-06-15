@@ -6,9 +6,9 @@ export default class MessagesViewport extends React.Component{
         super(props)
     }
 
-    componentDidMount(){
-        this.props.fetchMessages(this.props.currentChannelId);
-    }
+    // componentDidMount(){
+    //     this.props.fetchMessages(this.props.currentChannelId);
+    // }
 
     componentDidUpdate(){
         let viewport;
@@ -20,26 +20,26 @@ export default class MessagesViewport extends React.Component{
 
     render(){
 
-        this.messagesArray = Object.values(this.props.messages)
+        // this.messagesArray = Object.values(this.props.messages);
 
-        this.currentChannelMessages = this.messagesArray.filter(message => message.channel_id == this.props.currentChannelId)
+        // this.currentChannelMessages = this.messagesArray.filter(message => message.channel_id == this.props.currentChannelId);
 
-        if (this.props.messages) {
-            return (
-                <>
-                <ul id="messages-ul" className='messages-ul'>
+        // if (this.props.messages) {
+        //     return (
+        //         <>
+        //         <ul id="messages-ul" className='messages-ul'>
 
-                    {this.currentChannelMessages.map(message => {
+        //             {this.currentChannelMessages.map(message => {
                         return(
-                            <MessageItemContainer key={message.id} message={message}/>
+                            <MessageItemContainer /* key={message.id} message={message} *//>
                             
                         )
-                    })}
-                </ul>
-                </>
-            )
-        } else {
-            return null;
-        }
+        //             })}
+        //         </ul>
+        //         </>
+        //     )
+        // } else {
+        //     return null;
+        // }
     }
 }

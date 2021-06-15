@@ -12,10 +12,10 @@ const msp = state => {
         users: state.entities.users,
         currentUser: state.session.user.id,
         errors: state.errors.channel,
-
+        //currentUserEmail: state.entities.users[state.session.user.id].email,
         messages: state.entities.messages
-    }
-}
+    };
+};
 
 const mdp = dispatch => {
     return {
@@ -26,7 +26,7 @@ const mdp = dispatch => {
         clearErrors: () => dispatch(clearErrors()),
         fetchMessages: (channelId) => dispatch(fetchMessages(channelId))
 
-    }
-}
+    };
+};
 
 export default withRouter(connect(msp, mdp)(NewDMForm));

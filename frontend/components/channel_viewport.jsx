@@ -2,6 +2,7 @@ import React from "react";
 import ChannelSidebarContainer from "./channel_side_container";
 import ChannelContainer from "./channel_container";
 import SearchBarContainer from "./searchbar_container";
+import MessageItem from "./message_viewport";
 
 
 class ChannelViewport extends React.Component {
@@ -13,6 +14,7 @@ class ChannelViewport extends React.Component {
 
   handleLogout(event) {
     const user = {
+      email: this.props.currentUser.email,
       id: this.props.currentUser.id,
       online_status: false,
     };
@@ -61,10 +63,11 @@ class ChannelViewport extends React.Component {
             {/* </p>  */}
           </div>
           <div className="channel-viewport">
-            <ChannelSidebarContainer />
+            <ChannelSidebarContainer
+            currentUser={this.props.currentUser}  />
             
             <ChannelContainer />
-            {/* <MessageItem/> */}
+            <MessageItem/>
 
           </div>
         </div>

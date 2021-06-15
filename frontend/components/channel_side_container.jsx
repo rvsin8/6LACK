@@ -11,20 +11,27 @@ const msp = (state, ownProps) => {
         channels: state.entities.channels,
         currentChannelId: ownProps.match.params.channelId,
         users: state.entities.users
-    }
-}
+    };
+};
 
 const mdp = dispatch => {
     return {
         fetchChannels: () => dispatch(fetchChannels()),
-        createChannel: channel => dispatch(createChannel(channel)),
-        fetchChannel: channel => dispatch(fetchChannel(channel)),
-        updateChannel: channel => dispatch(updateChannel(channel)),
-        deleteChannel: channel => dispatch(deleteChannel(channel)),
-        logout: () => dispatch(logout()),
-        openModal: modal => dispatch(openModal(modal)),
-        fetchUsers: () => dispatch(fetchUsers())
-    }
-}
 
-export default withRouter(connect(msp,mdp)(ChannelSidebar));
+        createChannel: channel => dispatch(createChannel(channel)),
+
+        fetchChannel: channel => dispatch(fetchChannel(channel)),
+
+        updateChannel: channel => dispatch(updateChannel(channel)),
+
+        deleteChannel: channel => dispatch(deleteChannel(channel)),
+
+        logout: () => dispatch(logout()),
+
+        openModal: modal => dispatch(openModal(modal)),
+
+        fetchUsers: () => dispatch(fetchUsers())
+    };
+};
+
+export default withRouter(connect(msp, mdp)(ChannelSidebar));

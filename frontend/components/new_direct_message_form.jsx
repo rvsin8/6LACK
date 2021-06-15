@@ -59,7 +59,7 @@ class NewDMForm extends React.Component {
   formatTitle(users) {
     if (users.length > 0) {
       const allUsers = users.concat(
-        this.props.users[this.props.currentUser].email
+        // this.props.users[this.props.currentUser].email
       );
       return allUsers.sort().join(", ");
     } else return this.state.title;
@@ -172,7 +172,7 @@ class NewDMForm extends React.Component {
               {this.state.users.map((user, index) => {
                 return (
                   <span key={index} className="user-tag">
-                    <img className="avatar" src={avatar}></img>
+                    {/* <img className="avatar" src={avatar}></img> */}
                     <span className="dm-user-name">{user}</span>
                     <button
                       className="dm-button"
@@ -295,7 +295,7 @@ class NewDMForm extends React.Component {
                         }}
                       >
                         <div className="search-result">
-                          <img className="search-avatar" src={avatar} />
+                          {/* <img className="search-avatar" src={avatar} /> */}
                           <div>
                             <span className="search-result-title">
                               {this.displayTitle(channel.title)}

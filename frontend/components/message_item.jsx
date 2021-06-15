@@ -6,22 +6,22 @@ export default class MessageItem extends React.Component {
     constructor(props) {
         super(props);
 
-        this.getDate = this.getTimestamp.bind(this);
+        // this.getDate = this.getTimestamp.bind(this);
 
         this.state = {
-            id: this.props.message.id,
-            channel_id: this.props.message.channel_id,
+            // id: this.props.message.id,
+            // channel_id: this.props.message.channel_id,
             body: "",
-            user_id: this.props.message.user.id,
+            // user_id: this.props.message.user.id,
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.edited = this.edited.bind(this);
+        // this.edited = this.edited.bind(this);
     }
 
-    getTimestamp() {
-        return moment(new Date(this.props.message.created_at)).format("h:mm A");
-    }
+    // getTimestamp() {
+    //     return moment(new Date(this.props.message.created_at)).format("h:mm A");
+    // }
 
     handleInput(type) {
         return (event) => {
@@ -60,18 +60,18 @@ export default class MessageItem extends React.Component {
         }
     }
 
-    edited() {
-        if (this.props.message.updated_at > this.props.message.created_at) {
-            return "(Edited)";
-        } else return null;
-    }
+    // edited() {
+    //     if (this.props.message.updated_at > this.props.message.created_at) {
+    //         return "(Edited)";
+    //     } else return null;
+    // }
 
     render() {
-        if (this.props.message.user.id === this.props.currentUserId) {
+        
             //it's the current user's message
             return (
                 <div
-                    id={`${this.props.message.id}-wrapper`}
+                    //id={`${this.props.message.id}-wrapper`}
                     className="message-wrapper editable-message"
                 >
                     <div className="message-edit-button-wrapper">
@@ -96,19 +96,19 @@ export default class MessageItem extends React.Component {
                         </button>
                     </div>
                     <div>
-                        <img className="message-avatar" src={avatar} />
+                        {/* <img className="message-avatar" src={avatar} /> */}
                     </div>
                     <div
-                        id={`${this.props.message.id}-view`}
+                        // id={`${this.props.message.id}-view`}
                         className="message-container"
                     >
                         <div className="username-timestamp">
-                            <div className="username">{this.props.message.user.email}</div>
-                            <div className="timestamp">{this.getTimestamp()}</div>
+                            {/* <div className="username">{this.props.message.user.email}</div> */}
+                            {/* <div className="timestamp">{this.getTimestamp()}</div> */}
                         </div>
                         <div className="message">
-                            {this.props.message.body}
-                            <span className="edited">{this.edited()}</span>
+                            {/* {this.props.message.body} */}
+                            {/* <span className="edited">{this.edited()}</span> */}
                             {/* <button
                 className="message-edit-button"
                 onClick={() => {
@@ -132,14 +132,14 @@ export default class MessageItem extends React.Component {
 
                     <div
                         className="update-message-container"
-                        id={`${this.props.message.id}-update`}
+                        // id={`${this.props.message.id}-update`}
                     >
                         <form>
                             <input
                                 className="message-update-input"
-                                id={`${this.props.message.id}-input`}
+                                // id={`${this.props.message.id}-input`}
                                 type="text"
-                                placeholder={this.props.message.body}
+                                // placeholder={this.props.message.body}
                                 autoComplete="off"
                                 onChange={this.handleInput("body")}
                             />
@@ -179,12 +179,12 @@ export default class MessageItem extends React.Component {
                     </div>
                 </div>
             );
-        } else {
+        
             //it's somebody else's message
             return (
                 <div className="message-wrapper">
                     <div>
-                        <img className="message-avatar" src={avatar} />
+                        {/* <img className="message-avatar" src={avatar} /> */}
                     </div>
                     <div className="message-container">
                         <div className="username-timestamp">
@@ -195,6 +195,6 @@ export default class MessageItem extends React.Component {
                     </div>
                 </div>
             );
-        }
+        
     }
 }

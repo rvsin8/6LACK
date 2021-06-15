@@ -7,13 +7,13 @@ const msp = (state, ownProps) => {
     return {
         messages: state.entities.messages,
         currentChannelId: ownProps.match.params.channelId
-    }
-}
+    };
+};
 
 const mdp = dispatch => {
     return {
         fetchMessages: (channelId) => dispatch(fetchMessages(channelId))
-    }
-}
+    };
+};
 
 export default withRouter(connect(msp,mdp)(MessagesViewport));

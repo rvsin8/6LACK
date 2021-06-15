@@ -10,6 +10,9 @@ const sessionReducer = (state = nullState, action) => {
         case RECEIVE_CURRENT_USER:
             return { id: action.user.id };
         case LOGOUT_CURRENT_USER:
+            const nextState = { ...defaultState };
+            delete nextState.user.id;
+            delete nextState.user.email;
             return nullState;
         default:
             return state;
