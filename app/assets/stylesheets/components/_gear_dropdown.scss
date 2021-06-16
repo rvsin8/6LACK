@@ -19,11 +19,20 @@
 
 .workspace-box {
     color: #ffffff;
-    padding-left: 15px;
-    padding-top: 20px;
+    padding: 20px 0 10px 15px;
+
     border-bottom: 1px solid rgb(82,38,83);
-    font-weight: 700;
     height: 48.45px;
+}
+
+.workspace-box p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 19px;
+    padding-bottom: 3px;
+}
+
+.circle {
+    padding-right: 10px;
 }
 
 .workspace-box:hover {
@@ -60,7 +69,7 @@
 }
 
 .channels-header {
-    display: inline-block;
+   /*  display: inline-block; */
 }
 
 .fa-caret-down {
@@ -76,11 +85,11 @@
 }
 
 .channel-fa-plus {
-    margin-left: 120px;
+    margin-left: 100px;
 }
 
 .dm-fa-plus {
-    margin-left: 68px;
+    margin-left: 48px;
 }
 
 .fa-plus:hover {
@@ -99,9 +108,8 @@
     background-color: #3F0D40;
     color: #c3b4c4;
     border: none;
-    font-weight: 500;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 19px;
     cursor: pointer;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -111,8 +119,8 @@
     background-color: #3F0D40;
     color: #c3b4c4;
     border: none;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 19px;
     cursor: pointer;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -156,10 +164,11 @@
 
 .channel-li a {
     list-style: none;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 28px;
     color: #c3b4c4;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .channel-li-current a {
@@ -201,7 +210,8 @@
 
 .dm-li a {
     list-style: none;
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 500;
     line-height: 28px;
     color: #c3b4c4;
     text-decoration: none;

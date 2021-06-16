@@ -2,7 +2,11 @@ import React from "react";
 import ChannelSidebarContainer from "./channel_side_container";
 import ChannelContainer from "./channel_container";
 import SearchBarContainer from "./searchbar_container";
-import MessageItem from "./message_viewport";
+import MessageItem from "./message_viewport_container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOutAlt } from "@fortawesome/fontawesome-free-solid";
+// import { faUser } from "@fortawesome/fontawesome-free-solid";
+
 
 
 class ChannelViewport extends React.Component {
@@ -44,31 +48,35 @@ class ChannelViewport extends React.Component {
       <>
         <div id="logged-in-container">
           <div className="search-bar">
-           {/*  <div className="search-inner-div" > */}
-              <SearchBarContainer/>
-           {/*    <i className="fas fa-search">    */}      
-                {/* <SearchBarContainer/>  */}
-                
-                
-                
-                
+            {/*  <div className="search-inner-div" > */}
+            {/* <div className="arrow-bar">
+              <FontAwesomeIcon icon={faArrowLeft} color="gray" size="lg" />
+              <FontAwesomeIcon icon={faArrowRight} color="gray" size="lg" />
+            </div> */}
+            <SearchBarContainer />
+
+            <p className="sign-out">
+              <FontAwesomeIcon icon={faSignOutAlt} color="white" size="lg" className="signIcon" />
+              &nbsp;Sign Out
+  {/*             <FontAwesomeIcon icon={faUser} color="white" size="lg" /> */}
+            </p>
+            {/*    <i className="fas fa-search">    */}
+            {/* <SearchBarContainer/>  */}
 
             {/*   </i> */}
 
             {/* </div> */}
             {/* <SearchBarContainer/> */}
             {/* <p className="logout" onClick={this.handleLogout}> */}
-              {/* <i className="fas fa-sign-out-alt"></i> */}
-              {/* &nbsp;Sign Out */}
+            {/* <i className="fas fa-sign-out-alt"></i> */}
+            {/* &nbsp;Sign Out */}
             {/* </p>  */}
           </div>
           <div className="channel-viewport">
-            <ChannelSidebarContainer
-            currentUser={this.props.currentUser}  />
-            
-            <ChannelContainer />
-            <MessageItem/>
+            <ChannelSidebarContainer currentUser={this.props.currentUser} />
 
+            <ChannelContainer />
+            <MessageItem />
           </div>
         </div>
       </>

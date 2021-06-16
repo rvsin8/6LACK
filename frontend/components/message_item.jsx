@@ -195,6 +195,6 @@ export default class MessageItem extends React.Component {
                     </div>
                 </div>
             );
-        
+            
     }
 }

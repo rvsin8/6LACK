@@ -1,5 +1,11 @@
 import React from 'react';
 import ChannelSidebarItem from './channel_side_item';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/fontawesome-free-solid";
+import { faCaretDown } from "@fortawesome/fontawesome-free-solid";
+import { faCircle } from "@fortawesome/fontawesome-free-solid";
+import { faPlus } from "@fortawesome/fontawesome-free-solid";
+
 
 
 class ChannelSidebar extends React.Component {
@@ -80,7 +86,18 @@ class ChannelSidebar extends React.Component {
         <div className="workspace-box">
           <p>
             Your Workspace&nbsp;&nbsp;
-                <i className="fas fa-chevron-down"></i>
+            <FontAwesomeIcon icon={faChevronDown} color="white" size="6x" />
+            {/* <i className="fas fa-chevron-down"></i> */}
+          </p>
+          <p>
+            {/* <i className="fas fa-circle" /> */}
+            <FontAwesomeIcon
+              icon={faCircle}
+              color="green"
+              size="xs"
+              className="circle"
+            />
+            6lack
           </p>
 
           {/* <div className="user-name">
@@ -92,17 +109,29 @@ class ChannelSidebar extends React.Component {
         <div className="channels">
           <div className="channels-toogle">
             <div className="channels-header">
-              <i id="channels-caret" className="fas fa-caret-down"></i>
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                color="white"
+                size="lg"
+                className="circle"
+              />
+              {/* <i id="channels-caret" className="fas fa-caret-down"></i> */}
 
               <button
                 className="channels-toggle-button"
                 onClick={this.toggleChannels}
               >
                 Channels
-                  </button>
+              </button>
 
               <a onClick={() => this.props.openModal("addChannel")}>
-                <i className="fas fa-plus channel-fa-plus"></i>
+                {/* <i className="fas fa-plus channel-fa-plus"></i> */}
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  color="white"
+                  size="lg"
+                  className="channel-fa-plus"
+                />
               </a>
             </div>
 
@@ -114,9 +143,7 @@ class ChannelSidebar extends React.Component {
                 //   this.props.currentUser.id
                 // );
 
-                if (
-                  channel.channel_or_dm === "channel" 
-                ) {
+                if (channel.channel_or_dm === "channel") {
                   return (
                     <ChannelSidebarItem
                       key={channel.id}
@@ -132,17 +159,21 @@ class ChannelSidebar extends React.Component {
 
           <div className="channels-toogle">
             <div className="channels-header">
-              <i id="dms-caret" className="fas fa-caret-down"></i>
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                color="white"
+                size="lg"
+                className="circle"
+              />
+              {/* <i id="dms-caret" className="fas fa-caret-down"></i> */}
 
-              <button
-                className="dms-toggle-button"
-                onClick={this.toggleDms}
-              >
+              <button className="dms-toggle-button" onClick={this.toggleDms}>
                 Direct messages
-                  </button>
+              </button>
 
               <a onClick={() => this.props.openModal("addDM")}>
-                <i className="fas fa-plus dm-fa-plus"></i>
+                <FontAwesomeIcon icon={faPlus} color="white" size="lg" className='dm-fa-plus' />
+                {/* <i className="fas fa-plus dm-fa-plus"></i> */}
               </a>
             </div>
 
@@ -152,11 +183,13 @@ class ChannelSidebar extends React.Component {
 
                 // const currentUserIsMember = userIds.includes(
                 //   this.props.currentUser.id
-                // ); 
+                // );
 
                 // const channelDisplayTitle = channel.title.split(', ').filter(user => user !== this.props.currentUser.email).join(", ");
 
-                const onlineUsers = Object.values(this.props.users).filter(user => user.online_status).map(user => user.email);
+                const onlineUsers = Object.values(this.props.users)
+                  .filter((user) => user.online_status)
+                  .map((user) => user.email);
 
                 // const onlineStatus = onlineUsers.includes(channelDisplayTitle);
 

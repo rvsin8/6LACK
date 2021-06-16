@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/fontawesome-free-solid";
+import { faArrowRight } from "@fortawesome/fontawesome-free-solid";
+import { faHistory } from "@fortawesome/fontawesome-free-solid";
 
 export default class Searchbar extends React.Component {
   constructor(props) {
@@ -96,25 +100,38 @@ export default class Searchbar extends React.Component {
 
     return (
       <>
-        <form id="search-form" onSubmit={() => event.preventDefault()}>
-          <i className="fas fa-search gray"></i>
-          <input
-            id="search-input"
-            placeholder={this.placeholderText}
-            type="text"
-            autoComplete="off"
-            onChange={this.handleInput("searchValue")}
-          ></input>
-          <a
-            className="search-modal-closer"
-            onClick={() => this.props.closeModal()}
-          >
-            &times;
-          </a>
-        </form>
+        <div className="search-container">
+          <div className="arrow-bar">
+            <FontAwesomeIcon icon={faArrowLeft} color="gray" size="lg" />
+            <FontAwesomeIcon icon={faArrowRight} color="gray" size="lg" />
+          </div>
 
-        {this.state.searchValue ? searchResults : noSearchResults}
+          <FontAwesomeIcon
+            icon={faHistory}
+            color="white"
+            size="lg"
+            className="history"
+          />
 
+          <form id="search-form" onSubmit={() => event.preventDefault()}>
+            <i className="fas fa-search gray"></i>
+            <input
+              id="search-input"
+              placeholder={this.placeholderText}
+              type="text"
+              autoComplete="off"
+              onChange={this.handleInput("searchValue")}
+            ></input>
+            <a
+              className="search-modal-closer"
+              onClick={() => this.props.closeModal()}
+            >
+              &times;
+            </a>
+          </form>
+
+          {this.state.searchValue ? searchResults : noSearchResults}
+        </div>
       </>
     );
   }
