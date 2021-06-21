@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import MessageForm from "./messageform";
+import MessageForm from "./message_form";
 import { withRouter } from "react-router-dom";
-// import {  } from "../../actions/message_actions"
+
 
 const mapStateToProps = (state, ownProps) => {
   return {

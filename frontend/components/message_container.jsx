@@ -4,8 +4,8 @@ import {
   fetchMessage,
   fetchMessages,
   fetchChannelMessages,
-} from "..//actions/message_actions";
-import { fetchUser, fetchUsers } from "..//actions/user_action";
+} from "../../actions/message_actions";
+import { fetchUser, fetchUsers } from "../../actions/user_action";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {

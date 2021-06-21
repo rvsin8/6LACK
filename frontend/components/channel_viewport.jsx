@@ -5,6 +5,7 @@ import SearchBarContainer from "./searchbar_container";
 import MessageItem from "./message_viewport_container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/fontawesome-free-solid";
+import Chat from "./chat_room";
 // import { faUser } from "@fortawesome/fontawesome-free-solid";
 
 
@@ -74,9 +75,10 @@ class ChannelViewport extends React.Component {
           </div>
           <div className="channel-viewport">
             <ChannelSidebarContainer currentUser={this.props.currentUser} />
+            
 
-            <ChannelContainer />
-            <MessageItem />
+            <ChannelContainer/>
+            {/* <Chat /> */}
           </div>
         </div>
       </>

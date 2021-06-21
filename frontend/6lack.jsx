@@ -4,6 +4,7 @@ import Root from "./components/root";
 import configureStore from './store/store';
 import {updateUser} from './actions/user_action';
 
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const root = document.getElementById('root')

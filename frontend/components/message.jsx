@@ -1,4 +1,6 @@
 import React from "react";
+import { useStore } from "react-redux";
+import { FaUser } from "react-icons/fa";
 
 class Message extends React.Component {
   constructor(props) {
