@@ -127,8 +127,8 @@ cm32 = ChannelMembership.create!(user_id: User.fourth.id, channel_id: Channel.fi
 
 cm33 = ChannelMembership.create!(user_id: User.fifth.id, channel_id: Channel.find_by(title: 'Drake, Bad Bunny').id, created_at: '1/1/2021', updated_at: '1/1/2021')
 
-m1 = Message.create!(user_id: User.first.id,channel_id: Channel.first.id,body: 'Whats going on in here?',created_at: '1/1/2021',updated_at: '1/1/2021')
+m1 = Message.create!(user_id: User.first.id,channel_id: Channel.first.id,body: 'Lets get to work, I need another grammy',created_at: '1/1/2021',updated_at: '1/1/2021')
 
-m2 = Message.create!(user_id: User.second.id,channel_id: Channel.first.id,body: 'Not much.',created_at: '1/1/2021',updated_at: '1/1/2021')
+m2 = Message.create!(user_id: User.second.id,channel_id: Channel.first.id,body: 'Alright.',created_at: '1/1/2021',updated_at: '1/1/2021')
 
-m3 = Message.create!(user_id: User.third.id,channel_id: Channel.second.id,body: 'I like horses.',created_at: '1/1/2021',updated_at: '1/1/2021')
+m3 = Message.create!(user_id: User.third.id,channel_id: Channel.second.id,body: 'I love my wife',created_at: '1/1/2021',updated_at: '1/1/2021')
