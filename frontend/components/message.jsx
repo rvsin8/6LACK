@@ -1,6 +1,6 @@
 import React from "react";
 import { useStore } from "react-redux";
-import { FaUser } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
 
 class Message extends React.Component {
   constructor(props) {
@@ -20,22 +20,22 @@ class Message extends React.Component {
   render() {
     const { message, user, fetchUsers, fetchUser } = this.props;
     // const authorName = fetchUser(message.user_id)
-    const displayName =
-      user && user.display_name ? user.display_name : message.display_name;
+    // const displayName =
+      // user && user.display_name ? user.display_name : message.display_name;
 
-    let createdAt = new Date(message.created_at).toLocaleTimeString();
+    // let createdAt = new Date(message.created_at).toLocaleTimeString();
 
     return (
       <div className="message-div">
-        <div className={"who-div user" + message.user_id}>
+    {/*     <div className={"who-div user" + message.user_id}>
           <FaUser />
-        </div>
+        </div> */}
         <div className="messageinfo-div">
           <div className="author-time">
-            <p className="message-author">{displayName}</p>
-            <p className="message-date">{createdAt}</p>
+            {/* <p className="message-author">{displayName}</p>
+            <p className="message-date">{createdAt}</p> */}
           </div>
-          <p className="message-text">{message.body}</p>
+          {/* <p className="message-text">{message.body}</p> */}
         </div>
         <div ref={this.bottom}></div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import ChannelSidebarContainer from "./channel_side_container";
 import ChannelContainer from "./channel_container";
 import SearchBarContainer from "./searchbar_container";
-import MessageItem from "./message_viewport_container";
+import MessageContainer from "./message_container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/fontawesome-free-solid";
 import Chat from "./chat_room";
@@ -78,6 +78,7 @@ class ChannelViewport extends React.Component {
             
 
             <ChannelContainer/>
+            <MessageContainer/>
             {/* <Chat /> */}
           </div>
         </div>
