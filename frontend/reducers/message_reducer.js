@@ -1,23 +1,20 @@
 import {
-  RECEIVE_MESSAGE,
   RECEIVE_MESSAGES,
+  RECEIVE_MESSAGE,
   REMOVE_MESSAGE,
 } from "../actions/message_actions";
 
-const MessagesReducer = (state = {}, action) => {
-  Object.freeze(state);
-  let newState = Object.assign({}, state);
+const messagesReducer = (defaultState = false, action) => {
+  Object.freeze(defaultState);
+
   switch (action.type) {
-    case RECEIVE_MESSAGE:
-      return Object.assign(newState, { [action.message.id]: action.message });
     case RECEIVE_MESSAGES:
       return action.messages;
-    case REMOVE_MESSAGE:
-      delete newState[action.messageId];
-      return newState;
+    case RECEIVE_MESSAGE:
+      return Object.assign({}, defaultState, action.message);
     default:
-      return state;
+      return defaultState;
   }
 };
 
-export default MessagesReducer;
+export default messagesReducer;

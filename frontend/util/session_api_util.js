@@ -22,4 +22,3 @@ export const logout = () => (
 );
 
 
-//is there more exports?

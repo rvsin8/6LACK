@@ -1,31 +1,35 @@
-import { connect } from "react-redux";
-import Message from "./message";
-import {
-  fetchMessage,
-  fetchMessages,
-  fetchChannelMessages,
-} from "../actions/message_actions";
-import { fetchUser, fetchUsers } from "../actions/user_action";
-import { withRouter } from "react-router-dom";
+// import { connect } from "react-redux";
+// import Message from "./message";
+// import {
+//   fetchMessage,
+//   fetchMessages,
+//   fetchChannelMessages,
+// } from "../actions/message_actions";
+// import { fetchUser, fetchUsers } from "../actions/user_action";
+// import { withRouter } from "react-router-dom";
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    // user: state.entities.users[ownProps.message.user_id],
-  };
-};
+// const mapStateToProps = (state, ownProps) => {
+//   // debugger;
+//   return {
+//     // users: state.entities.users,
+//     currentChannelId: ownProps.match.params.channelId,
 
-const mapDispatchToProps = (dispatch) => {
-  //
-  return {
-    fetchChannelMessages: (channelId) => {
-      return dispatch(fetchChannelMessages(channelId));
-    },
-    fetchMessage: (id) => dispatch(fetchMessage(id)),
-    fetchUsers: () => dispatch(fetchUsers()),
-    fetchUser: (userId) => dispatch(fetchUser(userId)),
-  };
-};
+//     user: state.entities.users[ownProps.message.user_id],
+//   };
+// };
 
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(Message)
-);
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     fetchChannelMessages: (channelId) => {
+//       return dispatch(fetchChannelMessages(channelId));
+//     },
+//     fetchMessage: (id) => dispatch(fetchMessage(id)),
+//     fetchMessages: () => dispatch(fetchMessages()),
+//     fetchUsers: () => dispatch(fetchUsers()),
+//     fetchUser: (userId) => dispatch(fetchUser(userId)),
+//   };
+// };
+
+// export default withRouter(
+//   connect(mapStateToProps, mapDispatchToProps)(Message)
+// );

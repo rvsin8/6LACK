@@ -100,10 +100,10 @@ class ChannelSidebar extends React.Component {
             6lack
           </p>
 
-          {/* <div className="user-name">
+          <div className="user-name">
             <i className="fas fa-circle" />
-               &nbsp;{this.props.currentUser.email}
-          </div> */}
+               {/* &nbsp;{this.props.currentUser.email} */}
+          </div>
         </div>
 
         <div className="channels">
