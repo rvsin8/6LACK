@@ -43,15 +43,15 @@ u15 = User.create!(email: 'Bon Jovi', password: 'password', created_at: '1/1/202
 
 u16 = User.create!(email: 'Boyz II Men', password: 'password', created_at: '1/1/2021', updated_at: '1/1/2021', online_status: false)
 
-c1 = Channel.create!(title: 'General',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'Just chattin\ about whatever')
+c1 = Channel.create!(title: 'General',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'create')
         
-c2 = Channel.create!(title: 'Collabs',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'Horses and the amusement to be gained thereby')
+c2 = Channel.create!(title: 'Collabs',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'create')
 
-c3 = Channel.create!(title: 'Record Deals',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'Bideo games')
+c3 = Channel.create!(title: 'Record Deals',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'create')
 
-c4 = Channel.create!(title: 'Octoberfest',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'We talk about Star Wars here.')
+c4 = Channel.create!(title: 'Octoberfest',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'create')
 
-c5 = Channel.create!(title: 'Coachella',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'We talk about Star Trek here.')
+c5 = Channel.create!(title: 'Coachella',channel_type: 'public',channel_or_dm: 'channel',created_at: '1/1/2021',updated_at: '1/1/2021',description: 'create')
 
 c6 = Channel.create!(title: 'Jay, Beyonce', channel_type: 'private', channel_or_dm: 'dm', created_at: '1/1/2021',updated_at: '1/1/2021',description: '')
 

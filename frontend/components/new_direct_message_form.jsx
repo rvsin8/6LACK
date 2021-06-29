@@ -59,7 +59,7 @@ class NewDMForm extends React.Component {
   formatTitle(users) {
     if (users.length > 0) {
       const allUsers = users.concat(
-        this.props.users[this.props.currentUser].email
+        // this.props.users[this.props.currentUser].email
       );
       return allUsers.sort().join(", ");
     } else return this.state.title;
