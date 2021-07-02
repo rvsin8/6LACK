@@ -30,11 +30,11 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => {
 
 const mSTP = state => { 
     let defaultValue; 
-    if(state.entities.users[state.session.id]){
-        defaultValue = state.entities.users[state.session.id].channel_ids[0];
-    } else{
+    // if(state.entities.users[state.session.id]){
+    //     defaultValue = state.entities.users[state.session.id].channel_ids[0];
+    // } else{
        defaultValue = 1; 
-    }
+    // }
     return {
     loggedIn: Boolean(state.session.id),
     defaultChannel: defaultValue

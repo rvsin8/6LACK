@@ -12,7 +12,7 @@ const NavBar = props => {
 
             
             <li><Link to="/login" className="navbar-link">Log In</Link></li>
-            <div classname="tired">
+            <div className="tired">
                 <li><Link to="/signup" className="navbar-right">Try For Free</Link></li>
 
             </div>

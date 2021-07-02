@@ -6,7 +6,7 @@ import { fetchMessages } from "../actions/message_actions";
 const msp = (state, ownProps) => {
   return {
     messages: state.entities.messages,
-    currentChannelId: ownProps.match.params.channelId,
+    currentChannelId: ownProps.match.params.channelIds,
   };
 };
 

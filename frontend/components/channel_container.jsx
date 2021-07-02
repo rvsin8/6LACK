@@ -17,8 +17,8 @@ import Channel from './channel';
 const msp = (state, ownProps) => {
     return {
         users: state.entities.users,
-        channel: state.entities.channels[ownProps.match.params.channelId],
-        currentUser: state.entities.users[state.session.user.id]
+        channel: state.entities.channels[ownProps.match.params.channelIds],
+        currentUser: state.entities.users[state.session.id]
     }
 };
 
