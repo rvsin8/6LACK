@@ -6,9 +6,9 @@ export default class NewMessageForm extends React.Component {
 
     this.state = {
       body: "",
-      channel_id: this.props.channel,
-    // user_id: this.props.currentUser.id,
-    //   user: this.props.currentUser
+      channel_id: this.props.channel.id,
+      // user_id: this.props.currentUser.id,
+      //   user: this.props.currentUser
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +27,12 @@ export default class NewMessageForm extends React.Component {
     event.preventDefault();
 
     if (this.state.body !== "") {
-      const message = Object.assign({}, this.state);
+      const message = Object.assign(
+        {},
+        { user_id: this.props.currentUser.id },
+        this.state
+      );
+      console.log("SEND MESSAGE", message);
 
       this.props.createMessage(message).then((res) => {
         App.cable.subscriptions.subscriptions[0].speak({
@@ -43,25 +48,25 @@ export default class NewMessageForm extends React.Component {
   }
 
   render() {
-      const{channel_id}=this.state;
-      console.log("test",this.props);
+    const { channel, currentUser } = this.props;
+    console.log("test", this.props);
     let placeholder;
 
-    // if (this.props.channel.channel_or_dm === "channel") {
-    //     console.log("channel",this.props.channel);
-    //   placeholder = `Message #${this.channel.title}`;
-    // } else {
-    //   let channelDisplayTitleArray = this.props.channel.title.split(",");
+    if (channel.channel_or_dm === "channel") {
+      console.log("channel", channel);
+      placeholder = `Message #${channel.title}`;
+    } else {
+      let channelDisplayTitleArray = channel.title.split(",");
 
-    //   channelDisplayTitleArray.splice(
-    //     channelDisplayTitleArray.indexOf(this.props.currentUser.email),
-    //     1
-    //   );
+      channelDisplayTitleArray.splice(
+        channelDisplayTitleArray.indexOf(currentUser.email),
+        1
+      );
 
-    //   const channelDisplayTitle = channelDisplayTitleArray.join(", ");
+      const channelDisplayTitle = channelDisplayTitleArray.join(", ");
 
-    //   placeholder = `Message${channelDisplayTitle}`;
-    // } 
+      placeholder = `Message${channelDisplayTitle}`;
+    }
 
     return (
       <div className="message-form-container">

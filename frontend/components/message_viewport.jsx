@@ -7,6 +7,7 @@ export default class MessagesViewport extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props, "MESSAGE CONTAINER");
     this.props.fetchMessages(this.props.currentChannelId);
   }
 

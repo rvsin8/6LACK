@@ -12,7 +12,10 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    fetchMessages: (channelId) => dispatch(fetchMessages(channelId)),
+    fetchMessages: (channelId) => {
+      console.log("FETCH MESSAGES", channelId);
+      dispatch(fetchMessages(channelId))
+    }
   };
 };
 

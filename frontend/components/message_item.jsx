@@ -1,27 +1,21 @@
 import React from "react";
 import moment from "moment";
-moment().format();
 
 export default class MessageItem extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.getDate = this.getTimestamp.bind(this);
-
     this.state = {
-    //   id: this.props.message.id,
-    //   channel_id: this.props.message.channel_id,
       body: "",
-    //   user_id: this.props.message.user.id,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.edited = this.edited.bind(this);
+    this.edited = this.edited.bind(this);
   }
 
-//   getTimestamp() {
-//     return moment(new Date(this.props.message.created_at)).format("h:mm A");
-//   }
+  getTimestamp() {
+    return moment(new Date(this.props.message.created_at)).format("h:mm A");
+  }
 
   handleInput(type) {
     return (event) => {
@@ -34,10 +28,16 @@ export default class MessageItem extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    if (this.state.body !== "") {
-      const newMessage = Object.assign({}, this.state);
+    const { id, channel_id } = this.props.message;
+    const { body } = this.state;
 
-      this.props.updateMessage(newMessage).then((res) => {
+    if (body.length > 0) {
+      const messageParams = {
+        id: id,
+        channelId: channel_id,
+        body: body,
+      };
+      this.props.updateMessage(messageParams).then((res) => {
         App.cable.subscriptions.subscriptions[0].speak({
           message: res.message,
         });
@@ -60,18 +60,18 @@ export default class MessageItem extends React.Component {
     }
   }
 
-//   edited() {
-//     if (this.props.message.updated_at > this.props.message.created_at) {
-//       return "(Edited)";
-//     } else return null;
-//   }
+  edited() {
+    if (this.props.message.updated_at > this.props.message.created_at) {
+      return "(Edited)";
+    } else return null;
+  }
 
   render() {
-    // if (this.props.message.user.id === this.props.currentUserId) {
+    if (this.props.message.user.id === this.props.currentUserId) {
       //it's the current user's message
       return (
         <div
-        //   id={`${this.props.message.id}-wrapper`}
+          id={`${this.props.message.id}-wrapper`}
           className="message-wrapper editable-message"
         >
           <div className="message-edit-button-wrapper">
@@ -92,56 +92,40 @@ export default class MessageItem extends React.Component {
                 wrapper.classList.add("beige");
               }}
             >
-              <i className="fas fa-pen"></i>
+              {/* TODO: ADD ICON FOR BUTTON */}
+              Edit me
             </button>
           </div>
+
           <div>
-            {/* <img className="message-avatar" src={avatar} /> */}
+            <img className="message-avatar" src={""} />
           </div>
+
           <div
-            // id={`${this.props.message.id}-view`}
+            id={`${this.props.message.id}-view`}
             className="message-container"
           >
             <div className="username-timestamp">
-              {/* <div className="username">{this.props.message.user.email}</div> */}
-              {/* <div className="timestamp">{this.getTimestamp()}</div> */}
+              <div className="username">{this.props.message.user.email}</div>
+              <div className="timestamp">{this.getTimestamp()}</div>
             </div>
+
             <div className="message">
-              {/* {this.props.message.body} */}
-              {/* <span className="edited">{this.edited()}</span> */}
-              {/* <button
-                className="message-edit-button"
-                onClick={() => {
-                  document.getElementById(
-                    `${this.props.message.id}-view`
-                  ).style = "display:none;";
-                  document.getElementById(
-                    `${this.props.message.id}-update`
-                  ).style = "display: block";
-
-                  const wrapper = document.getElementById(
-                    `${this.props.message.id}-wrapper`
-                  );
-
-                  wrapper.classList.remove("message-wrapper");
-                  wrapper.classList.add("beige");
-                }}
-              >
-                <i className="fas fa-pen"></i>
-              </button> */}
+              {this.props.message.body}
+              <span className="edited">{this.edited()}</span>
             </div>
           </div>
 
           <div
             className="update-message-container"
-            // id={`${this.props.message.id}-update`}
+            id={`${this.props.message.id}-update`}
           >
             <form>
               <input
                 className="message-update-input"
-                // id={`${this.props.message.id}-input`}
+                id={`${this.props.message.id}-input`}
                 type="text"
-                // placeholder={this.props.message.body}
+                placeholder={this.props.message.body}
                 autoComplete="off"
                 onChange={this.handleInput("body")}
               />
@@ -181,12 +165,12 @@ export default class MessageItem extends React.Component {
           </div>
         </div>
       );
-    // } else {
+    } else {
       //it's somebody else's message
       return (
         <div className="message-wrapper">
           <div>
-            <img className="message-avatar" src={avatar} />
+            <img className="message-avatar" src={""} />
           </div>
           <div className="message-container">
             <div className="username-timestamp">
@@ -197,6 +181,6 @@ export default class MessageItem extends React.Component {
           </div>
         </div>
       );
-    // }
+    }
   }
 }
