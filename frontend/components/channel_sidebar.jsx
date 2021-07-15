@@ -1,25 +1,26 @@
-import React from 'react';
-import ChannelSidebarItem from './channel_side_item';
+import React from "react";
+import ChannelSidebarItem from "./channel_side_item";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/fontawesome-free-solid";
 import { faCaretDown } from "@fortawesome/fontawesome-free-solid";
 import { faCircle } from "@fortawesome/fontawesome-free-solid";
 import { faPlus } from "@fortawesome/fontawesome-free-solid";
 
-
-
 class ChannelSidebar extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: '',
-      channel_type: ''
-    }
+      title: "",
+      channel_type: "",
+      channels_open: true,
+      dm_open: true,
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-
-  };
+    this.toggleChannels = this.toggleChannels.bind(this);
+    this.toggleDms = this.toggleDms.bind(this);
+  }
 
   componentDidMount() {
     this.props.fetchUsers();
@@ -30,15 +31,17 @@ class ChannelSidebar extends React.Component {
     return (event) => {
       this.setState({ [type]: event.target.value });
     };
-  };
+  }
 
   handleSubmit(event) {
     event.preventDefault();
     const channel = Object.assign({}, this.state);
     this.props.createChannel(channel);
-  };
+  }
 
   toggleChannels() {
+    const temp = this.state.channels_open;
+    this.setState({ channels_open: !temp });
 
     const channelsUl = document.getElementById("channels-ul");
 
@@ -51,9 +54,11 @@ class ChannelSidebar extends React.Component {
     const caret = document.getElementById("channels-caret");
 
     caret.classList.toggle("caret-toggled");
-  };
+  }
 
   toggleDms() {
+    const currentState = this.state.dm_open;
+    this.setState({ dm_open: !currentState });
 
     const dmsUl = document.getElementById("dms-ul");
 
@@ -66,11 +71,9 @@ class ChannelSidebar extends React.Component {
     const caret = document.getElementById("dms-caret");
 
     caret.classList.toggle("caret-toggled");
-  };
+  }
 
   render() {
-
-
     this.channelsArray = Object.values(this.props.channels).sort((a, b) => {
       const aTitle = a.title.toUpperCase();
       const bTitle = b.title.toUpperCase();
@@ -89,38 +92,40 @@ class ChannelSidebar extends React.Component {
             <FontAwesomeIcon icon={faChevronDown} color="white" size="6x" />
             {/* <i className="fas fa-chevron-down"></i> */}
           </p>
-          <p>
+          <p className="logged-in-name">
             {/* <i className="fas fa-circle" /> */}
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faCircle}
               color="green"
               size="xs"
               className="circle"
-            />
+            /> */}
             6lack
           </p>
 
           <div className="user-name">
             <i className="fas fa-circle" />
-               {/* &nbsp;{this.props.currentUser.email} */}
+            {/* &nbsp;{this.props.currentUser.email} */}
           </div>
         </div>
 
         <div className="channels">
           <div className="channels-toogle">
             <div className="channels-header">
-              <FontAwesomeIcon
-                icon={faCaretDown}
-                color="white"
-                size="lg"
-                className="circle"
-              />
               {/* <i id="channels-caret" className="fas fa-caret-down"></i> */}
 
               <button
                 className="channels-toggle-button"
                 onClick={this.toggleChannels}
               >
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  color="white"
+                  size="lg"
+                  className={`circle ${
+                    this.state.channels_open ? null : "closed"
+                  }`}
+                />
                 Channels
               </button>
 
@@ -159,20 +164,25 @@ class ChannelSidebar extends React.Component {
 
           <div className="channels-toogle">
             <div className="channels-header">
-              <FontAwesomeIcon
-                icon={faCaretDown}
-                color="white"
-                size="lg"
-                className="circle"
-              />
               {/* <i id="dms-caret" className="fas fa-caret-down"></i> */}
 
               <button className="dms-toggle-button" onClick={this.toggleDms}>
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  color="white"
+                  size="lg"
+                  className={`circle ${this.state.dm_open ? null : "closed"}`}
+                />
                 Direct messages
               </button>
 
               <a onClick={() => this.props.openModal("addDM")}>
-                <FontAwesomeIcon icon={faPlus} color="white" size="lg" className='dm-fa-plus' />
+                <FontAwesomeIcon
+                  icon={faPlus}
+                  color="white"
+                  size="lg"
+                  className="dm-fa-plus"
+                />
                 {/* <i className="fas fa-plus dm-fa-plus"></i> */}
               </a>
             </div>

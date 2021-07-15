@@ -7,7 +7,7 @@ import NewMessageForm from "./new_message_form";
 const msp = (state, ownProps) => {
   return {
     currentChannelId: ownProps.match.params.channelIds,
-    currentUser: state.entities.users[state.session.user.id],
+    currentUser: state.entities.users[state.session.id],
     channel: state.entities.channels[ownProps.match.params.channelIds],
   };
 };

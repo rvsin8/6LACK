@@ -76,7 +76,9 @@ export default class Searchbar extends React.Component {
             } else prefix = "#";
 
             if (
-              this.displayTitle(channel.title).toLowerCase().startsWith(this.state.searchValue.toLowerCase()) &&
+              this.displayTitle(channel.title)
+                .toLowerCase()
+                .startsWith(this.state.searchValue.toLowerCase()) &&
               this.state.searchValue != ""
             ) {
               return (
@@ -101,7 +103,7 @@ export default class Searchbar extends React.Component {
     return (
       <>
         <div className="search-container">
-          <div className="arrow-bar">
+          {/* <div className="arrow-bar">
             <FontAwesomeIcon icon={faArrowLeft} color="gray" size="lg" />
             <FontAwesomeIcon icon={faArrowRight} color="gray" size="lg" />
           </div>
@@ -111,7 +113,8 @@ export default class Searchbar extends React.Component {
             color="white"
             size="lg"
             className="history"
-          />
+          /> */}
+          <img className="search-logo" src={window.logo} />
 
           <form id="search-form" onSubmit={() => event.preventDefault()}>
             <i className="fas fa-search gray"></i>

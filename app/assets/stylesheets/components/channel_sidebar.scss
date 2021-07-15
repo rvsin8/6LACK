@@ -1,26 +1,25 @@
-.channels-header{
+.channels-header {
   /*   background-color: #4a154b;  */
-    
 }
 
 .left {
-    display:flex;
-    flex-direction: right;
-    padding-left: 1850px;
-
-
+  display: flex;
+  flex-direction: right;
+  padding-left: 1850px;
 }
-
 
 .left > .MuiSvgIcon-root {
-    padding-right: 100px;
+  padding-right: 100px;
 }
 
-.header_searchbox{
-    padding-left: 600px;
+.header_searchbox {
+  padding-left: 600px;
 }
 
-.header_searchbox{
-    padding-left: 1000px;
+.header_searchbox {
+  padding-left: 1000px;
+}
 
+.closed {
+  transform: rotate(-90deg);
 }

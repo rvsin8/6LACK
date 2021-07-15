@@ -1,344 +1,329 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  
-.ultra-div{
-        background: #f6efe8;
 
+.ultra-div {
+  background: #f6efe8;
 }
 
 .splash-div {
-    background: #f6efe8;
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    max-width: 3000px;
-    margin: 0 auto;
-    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    width: 80%;
-    
-    
-    
+  background: #f6efe8;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  max-width: 3000px;
+  margin: 0 auto;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma, Arial, sans-serif;
+  width: 80%;
 }
 .splash-div > div {
-    display: flex;
-    flex-direction: column;
-    height: 1000;
-    justify-content: space-between;
-    margin-top: auto;
-    margin-left: 30px;
-
+  display: flex;
+  flex-direction: column;
+  height: 1000;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-left: 30px;
 }
 
+.splash-hq {
+  background: #f6efe8;
 
-.splash-hq{
-    background: #f6efe8;
-
-    display: block;
-    box-sizing: inherit;
-    margin: 0 auto;
-    padding-top: 30px;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    font-weight: 700;
-    line-height: 1.0625;
-    letter-spacing: -1.5px;
-    font-size: 50px;
-    max-height: 70%;
-    display: block;
-    margin-top: 30px;
+  display: block;
+  box-sizing: inherit;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -1.5px;
+  font-size: 50px;
+  max-height: 70%;
+  display: block;
+  margin-top: 30px;
 }
-
-
 
 .team {
-    display: inline-block;
-    grid-column: 5/span 4;
-    grid-row: 3;
-    block-size: inherit;
-    line-height: 1.44444444;
-    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    height: fit-content;
-    font-weight: 400;
-    line-height: 1.333;
-    letter-spacing: 1px;
-    font-size: 1.125rem;
+  display: inline-block;
+  grid-column: 5 / span 4;
+  grid-row: 3;
+  block-size: inherit;
+  line-height: 1.44444444;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma, Arial, sans-serif;
+  height: fit-content;
+  font-weight: 400;
+  line-height: 1.333;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
 
-
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .splash-form {
-    grid-column: 5/span 2;
-    grid-row: 4;
-    align-self: end;
-    margin-bottom: 2rem;
+  grid-column: 5 / span 2;
+  grid-row: 4;
+  align-self: end;
+  margin-bottom: 2rem;
 }
 
-
 .splash-started {
+  padding: 15px;
+  font-weight: 425;
+  line-height: 1.28571429;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: #4a154b;
+  color: white;
+  box-shadow: none;
+  border: none;
+  letter-spacing: 1px;
+  outline: 0;
 
-    padding: 15px;
-    font-weight: 425;
-    line-height: 1.28571429;
-    border-radius: 4px;
-    font-size: .875rem;
-    background-color: #4a154b;
-    color:white;
-    box-shadow: none;
-    border: none;
-    letter-spacing: 1px;
-    outline: 0;
-
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .splash-started:hover {
-    background-color: #4a154b;
-    cursor: pointer;
+  background-color: #4a154b;
+  cursor: pointer;
 }
 
 .splash-login {
-    font-size: 90%;
+  font-size: 90%;
 }
-
 
 .navbar-right {
-    padding: 15px;
-    font-weight: 500;
-    line-height: 1;
-    border-radius: 4px;
-    font-size: .875rem;
-    color:white;
-    box-shadow: none;
-    border: none;
-    letter-spacing: 1px;
-    outline: 0;
-    background-color: #4a154b;
-    padding-left: 10px;
+  padding: 15px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: white;
+  box-shadow: none;
+  border: none;
+  letter-spacing: 1px;
+  outline: 0;
+  background-color: #4a154b;
+  padding-left: 10px;
 }
 
-.navbar-link{
-    background: white;
+.navbar-link {
+  background: white;
 }
 
 .splash-picture {
-    margin-bottom: inherit;
-    width: 100px;
-    height: 100px;
-    text-transform: lowercase;
-    font-size: 20px;
-    line-height: 1.46668;
-    font-weight: initial;
-    box-sizing: inherit;
-    padding-right: 30px;
-    padding-top:10px;
-    padding-left:20px;
-    
+  margin-bottom: inherit;
+  width: 100px;
+  height: 100px;
+  text-transform: lowercase;
+  font-size: 20px;
+  line-height: 1.46668;
+  font-weight: initial;
+  box-sizing: inherit;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-left: 20px;
 }
-
 
 .splash-div > .splash-bring {
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    justify-content: space-between;
-    margin-top: auto;
-    margin-left: 30px;
-
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-left: 30px;
 }
 .splash-div > .header-div-2 {
-    display: flex;
-    flex-direction: row;
-    height: 5000;
-    justify-content: space-between;
-    margin-top: auto;
-    margin-left: 30px;
-
+  display: flex;
+  flex-direction: row;
+  height: 5000;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-left: 30px;
 }
 
+.header-div-2 {
+  background: #f6efe8;
 
-.header-div-2{
-    background: #f6efe8;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -1.5px;
+  font-size: 50px;
+  max-height: 70%;
 
-    margin: 0 auto;
-    padding-top: 30px;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    font-weight: 700;
-    line-height: 1.0625;
-    letter-spacing: -1.5px;
-    font-size: 50px;
-    max-height: 70%;
-
-    margin-top: 30px;
-    
+  margin-top: 30px;
 }
 
-.better-way{
-    background: #f6efe8;
+.better-way {
+  background: #f6efe8;
 
-    display: block;
-    box-sizing: inherit;
-    margin: 0 auto;
-    padding-top: 30px;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    font-weight: 700;
-    line-height: 1.0625;
-    letter-spacing: -1.5px;
-    font-size: 50px;
-    max-height: 70%;
-    display: block;
-    margin-top: 30px;
-
+  display: block;
+  box-sizing: inherit;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -1.5px;
+  font-size: 50px;
+  max-height: 70%;
+  display: block;
+  margin-top: 30px;
 }
 
-.unlike-text{
-    display: inline-block;
-    grid-column: 5/span 4;
-    grid-row: 3;
-    block-size: inherit;
-    line-height: 1.44444444;
-    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    height: fit-content;
-    font-weight: 400;
-    line-height: 1.333;
-    letter-spacing: 1px;
-    margin-top: 0;
-    font-size: 1.125rem;
+.unlike-text {
+  display: inline-block;
+  grid-column: 5 / span 4;
+  grid-row: 3;
+  block-size: inherit;
+  line-height: 1.44444444;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma, Arial, sans-serif;
+  height: fit-content;
+  font-weight: 400;
+  line-height: 1.333;
+  letter-spacing: 1px;
+  margin-top: 0;
+  font-size: 1.125rem;
 
-
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
-
-.splash-started2{
-    padding: 19px 40px 20px;
-    font-weight: 425;
-    line-height: 1.28571429;
-    border-radius: 4px;
-    font-size: .875rem;
-    background-color: #f6efe8;
-    color:#4a154b;
-    box-shadow: none;
-    border: none;
-    letter-spacing: 1px;
-    outline: 0;
-        margin-left: 100px;
-    margin-top: 30px;
+.splash-started2 {
+  padding: 19px 40px 20px;
+  font-weight: 425;
+  line-height: 1.28571429;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: #f6efe8;
+  color: #4a154b;
+  box-shadow: none;
+  border: none;
+  letter-spacing: 1px;
+  outline: 0;
+  margin-left: 100px;
+  margin-top: 30px;
 }
 
-.header-div-3{
-    background: #f6efe8;
+.header-div-3 {
+  background: #f6efe8;
 
-    margin: 0 auto;
-    padding-top: 30px;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    font-weight: 700;
-    line-height: 1.0625;
-    letter-spacing: -1.5px;
-    font-size: 50px;
-    max-height: 70%;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -1.5px;
+  font-size: 50px;
+  max-height: 70%;
 
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-    
-
-.better-way-2{
-    background: #f6efe8;
-
-    display: block;
-    box-sizing: inherit;
-    margin: 0 auto;
-    padding-top: 30px;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    font-weight: 700;
-    line-height: 1.0625;
-    letter-spacing: -1.5px;
-    font-size: 50px;
-    max-height: 70%;
-    display: block;
-    margin-top: 30px;
-    margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-.unlike-text-2{
-    display: inline-block;
-    grid-column: 5/span 4;
-    grid-row: 3;
-    block-size: inherit;
-    line-height: 1.44444444;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-    line-height: 1.35714286;
-    letter-spacing: -.3px;
-    height: fit-content;
-    font-weight: 300;
-    line-height: 1.333;
-    letter-spacing: 1px;
-    margin-top: 0;
-    font-size: 1.125rem;
+.better-way-2 {
+  background: #f6efe8;
 
-
-    margin-top: 30px;
-
+  display: block;
+  box-sizing: inherit;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -1.5px;
+  font-size: 50px;
+  max-height: 70%;
+  display: block;
+  margin-top: 30px;
+  margin-left: 100px;
 }
 
+.unlike-text-2 {
+  display: inline-block;
+  grid-column: 5 / span 4;
+  grid-row: 3;
+  block-size: inherit;
+  line-height: 1.44444444;
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  line-height: 1.35714286;
+  letter-spacing: -0.3px;
+  height: fit-content;
+  font-weight: 300;
+  line-height: 1.333;
+  letter-spacing: 1px;
+  margin-top: 0;
+  font-size: 1.125rem;
+
+  margin-top: 30px;
+}
 
 .firstcol {
-    display: flex;
-    width: 80%;
-    background: transparent;
-    justify-content: space-around;
-    margin-left: 100px;
+  display: flex;
+  width: 80%;
+  background: transparent;
+  justify-content: space-around;
+  margin-left: 100px;
 }
-.seccol{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    background: transparent;
-    justify-content: space-around;
-    margin-left: 100px;
-
+.seccol {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background: transparent;
+  justify-content: space-around;
+  margin-left: 100px;
 }
-.thirdcol{
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    background: transparent;
-    justify-content: space-around;
-    margin-left: 100px;
-
+.thirdcol {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background: transparent;
+  justify-content: space-around;
+  margin-left: 100px;
 }
 
-.video{
-        max-width: 50%;
-        max-height: 70%;
-        margin-top: 30px;
-
-        
-        
+.video {
+  max-width: 50%;
+  max-height: 70%;
+  margin-top: 30px;
 }
-.animation-1{
-        max-width: 100%;
-        max-height: 70%;
-        margin-top: 30px;
-        margin-left: 100px;
+.animation-1 {
+  max-width: 100%;
+  max-height: 70%;
+  margin-top: 30px;
+  margin-left: 100px;
 }
 
-.youtube{
-        max-width: 100%;
-        max-height: 70%;
-        margin-top: 30px;
-        margin-left: 100px;
-    
-
+.youtube {
+  max-width: 100%;
+  max-height: 70%;
+  margin-top: 30px;
+  margin-left: 100px;
 }
 
-.tired{
-    padding-left: 50px;
+.tired {
+  margin: 0px 35px;
 }
 
-.footer{
-    height: 100%;
-    width: 100;
+.footer {
+  height: 100%;
+  width: 100;
+}
 
+.footer-1-list {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
 }
