@@ -98,8 +98,8 @@ class NewDMForm extends React.Component {
     let title = [user.email].concat(
       this.props.users[this.props.currentUser].email
     );
-    title = title.sort().join(", ");
-    return Object.values(this.state.channels)
+    title = title.sort().join(", ");           
+    return Object.values(this.props.channels)
       .map((channel) => channel.title)
       .includes(title)
       ? true
