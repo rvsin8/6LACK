@@ -11,9 +11,9 @@ const sessionReducer = (state = nullState, action) => {
             // return { id: action.user.id };
             return Object.assign({}, state, {id: action.user.id});
         case LOGOUT_CURRENT_USER:
-            const nextState = { ...defaultState };
-            delete nextState.user.id;
-            delete nextState.user.email;
+            // const nextState = { ...defaultState };
+            // delete nextState.user.id;
+            // deletes nextState.user.email;
             return nullState;
         default:
             return state;

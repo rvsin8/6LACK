@@ -10,26 +10,25 @@ class SplashPage extends React.Component {
       email: "",
       submitted: false,
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleSubmit(e) {
+ /*  handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then(() => {
       return this.props.history.push("/signup");
     });
-  }
+  } */
 
   handleClick() {
     this.props
       .processForm({
-        username: "ricardo",
-        email: "sixlack@interscope.com",
-        password: "prettylittlefears",
+        email: "Kanye",
+        password: "password",
       })
       .then(() => {
-        return this.props.history.push("/channels");
+        return this.props.history.push("/channels/140");
       });
   }
 
@@ -52,11 +51,11 @@ class SplashPage extends React.Component {
                     music.
                   </div>
                   <br />
-                  <form className="splash-form" onSubmit={this.handleSubmit}>
+                  <form className="splash-form" onSubmit={this.handleClick}>
                     <input
                       type="submit"
                       className="splash-started"
-                      value="Try For Free"
+                      value="DEMO"
                     />
                   </form>
                   <br />
@@ -94,9 +93,9 @@ class SplashPage extends React.Component {
                     they’re more than conversations — you can make calls, share
                     music files, and even connect with other musicians on apps.
                   </p>
-                  <form
+                 {/*  <form
                     className="splash-form"
-                    src={"./channels"}
+                    //src={"./channels/:channelIds"}
                     onClick={() => this.handleClick()}
                   >
                     <input
@@ -104,7 +103,7 @@ class SplashPage extends React.Component {
                       className="splash-started"
                       value="Demo"
                     />
-                  </form>
+                  </form> */}
                 </div>
               </div>
             </div>

@@ -14,6 +14,8 @@ class ChannelViewport extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log('props in channel viewport', this.props);
+
     this.handleLogout = this.handleLogout.bind(this);
   }
 
@@ -24,7 +26,10 @@ class ChannelViewport extends React.Component {
       online_status: false,
     };
     event.preventDefault();
-    this.props
+    this.props.logout();
+    this.props.history.push('/');
+
+    /* this.props
       .updateUser(user)
       .then((res) => {
         if (App.cable.subscriptions.subscriptions[1]) {
@@ -40,7 +45,7 @@ class ChannelViewport extends React.Component {
       })
       .then(() => {
         App.cable.subscriptions.subscriptions = [];
-      });
+      }); */
   }
 
   render() { 
@@ -56,7 +61,7 @@ class ChannelViewport extends React.Component {
             </div> */}
             <SearchBarContainer />
 
-            <p className="sign-out">
+            <p className="sign-out" onClick={this.handleLogout}>>
               <FontAwesomeIcon icon={faSignOutAlt} color="white" size="lg" className="signIcon" />
               &nbsp;Sign Out
   {/*             <FontAwesomeIcon icon={faUser} color="white" size="lg" /> */}
