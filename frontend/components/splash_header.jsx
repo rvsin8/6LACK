@@ -21,15 +21,18 @@ class SplashPage extends React.Component {
     });
   } */
 
-  handleClick() {
+  handleClick(e) {
+    e.preventDefault();
+    console.log("clicked demo");
     this.props
       .processForm({
         email: "Kanye",
         password: "password",
       })
       .then(() => {
+        console.log("executing then")
         return this.props.history.push("/channels/140");
-      });
+      })
   }
 
   render() {
