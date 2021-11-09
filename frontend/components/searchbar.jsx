@@ -12,7 +12,7 @@ export default class Searchbar extends React.Component {
 
     this.state = { searchValue: "", filteredChannelsArray: [] };
 
-    console.log('props channels', this.props.channels);
+    //console.log('props channels', this.props.channels);
 
     // this.filteredChannelsArray 
 
@@ -111,8 +111,8 @@ export default class Searchbar extends React.Component {
 
     const noSearchResults = <div id="search-filler">Narrow your search</div>;
 
-    console.log('SearchValue', this.state.searchValue);
-    console.log('filered channels array', this.state.filteredChannelsArray);
+    //console.log('SearchValue', this.state.searchValue);
+    //console.log('filered channels array', this.state.filteredChannelsArray);
     return (
       <>
         <div className="search-container">

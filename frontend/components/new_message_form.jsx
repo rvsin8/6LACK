@@ -32,7 +32,7 @@ export default class NewMessageForm extends React.Component {
         { user_id: this.props.currentUser.id },
         this.state
       );
-      console.log("SEND MESSAGE", message);
+      //("SEND MESSAGE", message);
 
       this.props.createMessage(message).then((res) => {
         App.cable.subscriptions.subscriptions[0].speak({
@@ -49,11 +49,11 @@ export default class NewMessageForm extends React.Component {
 
   render() {
     const { channel, currentUser } = this.props;
-    console.log("test", this.props);
+    //console.log("test", this.props);
     let placeholder;
 
     if (channel.channel_or_dm === "channel") {
-      console.log("channel", channel);
+      //console.log("channel", channel);
       placeholder = `Message #${channel.title}`;
     } else {
       let channelDisplayTitleArray = channel.title.split(",");

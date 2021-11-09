@@ -14,7 +14,7 @@ class ChannelViewport extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log('props in channel viewport', this.props);
+    //console.log('props in channel viewport', this.props);
 
     this.handleLogout = this.handleLogout.bind(this);
   }

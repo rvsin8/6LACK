@@ -9,7 +9,7 @@ class Channel extends React.Component {
   }
 
   componentDidMount() {
-    console.log("CHANNEL PROPS", this.props);
+    //console.log("CHANNEL PROPS", this.props);
     App.cable.subscriptions.create(
       { channel: "ChatChannel" },
       {

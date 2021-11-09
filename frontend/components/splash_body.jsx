@@ -7,12 +7,12 @@ const NavBar = (props) => {
       <ul className="session-nav">
         <img src={window.logo} className="splash-picture" />
 
-        <a className="navbar-link" href="https://github.com/rvsin8">
+        <a className="navbar-link" href="https://github.com/rvsin8" target="_blank">
           <p>GitHub</p>
         </a>
         <a
           className="navbar-link"
-          href="https://www.linkedin.com/in/ravneet-singh-20b978a4/"
+          href="https://www.linkedin.com/in/ravneet-singh-20b978a4/" target="_blank"
         >
           LinkedIn
         </a>
