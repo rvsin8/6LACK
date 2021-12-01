@@ -127,7 +127,7 @@ export default class Searchbar extends React.Component {
             size="lg"
             className="history"
           /> */}
-          <img className="search-logo" src={window.logo} />
+          {/* <img className="search-logo" src={window.logo} /> */}
 
           <form id="search-form" onSubmit={() => event.preventDefault()}>
             <i className="fas fa-search gray"></i>

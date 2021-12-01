@@ -89,7 +89,7 @@ class ChannelSidebar extends React.Component {
         <div className="workspace-box">
           <p>
             Your Workspace&nbsp;&nbsp;
-            <FontAwesomeIcon icon={faChevronDown} color="white" size="6x" />
+            
             {/* <i className="fas fa-chevron-down"></i> */}
           </p>
           <p className="logged-in-name">
@@ -100,7 +100,7 @@ class ChannelSidebar extends React.Component {
               size="xs"
               className="circle"
             /> */}
-            6lack
+          
           </p>
 
           <div className="user-name">

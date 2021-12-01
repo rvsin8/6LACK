@@ -98,7 +98,7 @@ export default class MessageItem extends React.Component {
           </div>
 
           <div>
-            <img className="message-avatar" src={""} />
+            <img className="message-avatar" src={window.logo} />
           </div>
 
           <div
@@ -170,7 +170,7 @@ export default class MessageItem extends React.Component {
       return (
         <div className="message-wrapper">
           <div>
-            <img className="message-avatar" src={""} />
+            <img className="message-avatar" src={window.logo} />
           </div>
           <div className="message-container">
             <div className="username-timestamp">

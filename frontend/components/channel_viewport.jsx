@@ -61,8 +61,8 @@ class ChannelViewport extends React.Component {
             </div> */}
             <SearchBarContainer />
 
-            <p className="sign-out" onClick={this.handleLogout}>>
-              <FontAwesomeIcon icon={faSignOutAlt} color="white" size="lg" className="signIcon" />
+            <p className="sign-out" onClick={this.handleLogout}>
+             
               &nbsp;Sign Out
   {/*             <FontAwesomeIcon icon={faUser} color="white" size="lg" /> */}
             </p>
