@@ -31,7 +31,7 @@ class SplashPage extends React.Component {
       })
       .then(() => {
         console.log("executing then")
-        return this.props.history.push("/channels/140");
+        return this.props.history.push("/channels/32");
       })
   }
 
