@@ -75,7 +75,7 @@ export default class Searchbar extends React.Component {
   render() {
     const searchResults = (
       <>
-        <div id="search-filler">Results:</div>
+        <div id="search-filler">Results: </div>
         <ul>
           {this.state.filteredChannelsArray.map((channel) => {
             let prefix;
