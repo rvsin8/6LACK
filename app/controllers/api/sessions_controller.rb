@@ -17,6 +17,7 @@ class Api::SessionsController < ApplicationController
   end
   #commit purposes
   #commit purposes
+  #commit purposes
 
   def destroy
     @user = current_user
