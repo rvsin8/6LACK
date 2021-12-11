@@ -18,7 +18,7 @@ class Api::SessionsController < ApplicationController
   #commit purposes
     #commit purposes
       #commit purposes
-        #commit purposes
+
 
 
 
