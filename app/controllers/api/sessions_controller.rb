@@ -16,6 +16,8 @@ class Api::SessionsController < ApplicationController
     end
   end
   #commit purposes
+    #commit purposes
+
 
 
   def destroy
