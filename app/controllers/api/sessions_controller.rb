@@ -16,7 +16,7 @@ class Api::SessionsController < ApplicationController
     end
   end
   #commit purposes
-  #I would like to add daterange control and when click image, want to show image zoom viewer.
+
   #I would like to add daterange control and when click image, want to show image zoom viewer.
 
 
