@@ -14,12 +14,12 @@ class SplashPage extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
- /*  handleSubmit(e) {
-    e.preventDefault();
-    this.props.processForm(this.state).then(() => {
-      return this.props.history.push("/signup");
-    });
-  } */
+  /*  handleSubmit(e) {
+     e.preventDefault();
+     this.props.processForm(this.state).then(() => {
+       return this.props.history.push("/signup");
+     });
+   } */
 
   handleClick(e) {
     e.preventDefault();
@@ -31,7 +31,7 @@ class SplashPage extends React.Component {
       })
       .then(() => {
         console.log("executing then")
-        return this.props.history.push("/channels/32");
+        return this.props.history.push("/channels/141");
       })
   }
 
@@ -96,7 +96,7 @@ class SplashPage extends React.Component {
                     they’re more than conversations — you can make calls, share
                     music files, and even connect with other musicians on apps.
                   </p>
-                 {/*  <form
+                  {/*  <form
                     className="splash-form"
                     //src={"./channels/:channelIds"}
                     onClick={() => this.handleClick()}
