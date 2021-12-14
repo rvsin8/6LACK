@@ -7,10 +7,11 @@ import { fetchMessages } from '../actions/message_actions';
 import { withRouter } from 'react-router-dom';
 
 const msp = state => {
+    const userId = state.session.id ? state.session.id : state.session.user.id;
     return {
         channels: state.entities.channels,
         users: state.entities.users,
-        currentUser: state.session.user.id,
+        currentUser: userId,
         errors: state.errors.channel,
         // currentUserEmail: state.entities.users[state.session.user.id].email,
         messages: state.entities.messages

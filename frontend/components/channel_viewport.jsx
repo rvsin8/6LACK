@@ -20,9 +20,12 @@ class ChannelViewport extends React.Component {
   }
 
   handleLogout(event) {
+
+    const currentUser = Object.values(this.props.users)[0];
+
     const user = {
-      email: this.props.currentUser.email,
-      id: this.props.currentUser.id,
+      email: currentUser.email,
+      id: currentUser.id,
       online_status: false,
     };
     event.preventDefault();
@@ -48,7 +51,7 @@ class ChannelViewport extends React.Component {
       }); */
   }
 
-  render() { 
+  render() {
 
     return (
       <>
@@ -62,7 +65,7 @@ class ChannelViewport extends React.Component {
             <SearchBarContainer />
 
             <p className="sign-out" onClick={this.handleLogout}>
-             
+
               &nbsp;Sign Out
   {/*             <FontAwesomeIcon icon={faUser} color="white" size="lg" /> */}
             </p>
@@ -80,9 +83,9 @@ class ChannelViewport extends React.Component {
           </div>
           <div className="channel-viewport">
             <ChannelSidebarContainer currentUser={this.props.currentUser} />
-            
 
-            <ChannelContainer/>
+
+            <ChannelContainer />
             {/* <MessageContainer/> */}
             {/* <Chat /> */}
           </div>

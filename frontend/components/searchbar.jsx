@@ -33,25 +33,35 @@ export default class Searchbar extends React.Component {
       placeholderMessages[randomNum(placeholderMessages.length - 1)];
   }
 
-  componentDidUpdate(prevProps){
-    // console.log('updateing props', this.props);
-    if(JSON.stringify(prevProps.channels) !== JSON.stringify(this.props.channels)){
-      this.setState({filteredChannelsArray: Object.values(this.props.channels)
-      .filter((channel) => {
-        return channel.users
-          .map((user) => user.id)
-          .includes(this.props.currentUser.id);
-      })
-      .sort((a, b) => {
-        const aTitle = a.title.toUpperCase();
-        const bTitle = b.title.toUpperCase();
-        if (aTitle < bTitle) {
-          return -1;
-        } else if (aTitle > bTitle) {
-          return 1;
-        } else return 0;
-      })
-    });
+  componentDidMount() {
+    console.log("channels list", this.props);
+    console.log("state in searchbar", this.state);
+    this.setState({ filteredChannelsArray: Object.values(this.props.channels) });
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log('current props', this.props);
+    console.log("prev props", prevProps);
+    if (JSON.stringify(prevProps.channels) !== JSON.stringify(this.props.channels)) {
+      console.log("UPDATING CHANNEL LIST NOWWW");
+      this.setState({
+        filteredChannelsArray: Object.values(this.props.channels)
+          .sort((a, b) => {
+            const aTitle = a.title.toUpperCase();
+            const bTitle = b.title.toUpperCase();
+            if (aTitle < bTitle) {
+              return -1;
+            } else if (aTitle > bTitle) {
+              return 1;
+            } else return 0;
+          })
+        /* .filter((channel) => {
+          return channel.users
+            .map((user) => user.id)
+            .includes(this.props.currentUser.id);
+        }) */
+
+      });
     }
   }
 
@@ -73,6 +83,9 @@ export default class Searchbar extends React.Component {
 
 
   render() {
+
+    console.log("LIST of channels", this.state.filteredChannelsArray);
+
     const searchResults = (
       <>
         <div id="search-filler">Results: </div>
@@ -86,6 +99,8 @@ export default class Searchbar extends React.Component {
               } else prefix = <i className="fas fa-lock"></i>;
             } else prefix = "#";
 
+
+            console.log("channel Search", channel);
             if (
               this.displayTitle(channel.title)
                 .toLowerCase()
@@ -111,7 +126,7 @@ export default class Searchbar extends React.Component {
 
     const noSearchResults = <div id="search-filler">Narrow your search</div>;
 
-    //console.log('SearchValue', this.state.searchValue);
+    console.log('SearchValue', this.state.searchValue);
     //console.log('filered channels array', this.state.filteredChannelsArray);
     return (
       <>

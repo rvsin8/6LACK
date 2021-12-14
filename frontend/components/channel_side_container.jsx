@@ -1,13 +1,14 @@
-import {withRouter} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {fetchChannels,fetchChannel,createChannel,updateChannel,deleteChannel} from '../actions/channel_action'; //rework actions
-import {fetchUsers} from '../actions/user_action';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchChannels, fetchChannel, createChannel, updateChannel, deleteChannel } from '../actions/channel_action'; //rework actions
+import { fetchUsers } from '../actions/user_action';
 import { openModal } from '../actions/modal_actions'; //rework
 import ChannelSidebar from './channel_sidebar';
 
 const msp = (state, ownProps) => {
+    const userId = state.session.id ? state.session.id : state.session.user.id;
     return {
-        currentUser: state.entities.users[state.session.user.id],
+        currentUser: state.entities.users[userId],
         channels: state.entities.channels,
         currentChannelId: ownProps.match.params.channelIds,
         users: state.entities.users
