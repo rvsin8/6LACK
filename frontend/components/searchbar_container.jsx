@@ -13,7 +13,6 @@ const msp = state => {
     };
 };
 
-//commit purposes
 
 const mdp = dispatch => {
 
