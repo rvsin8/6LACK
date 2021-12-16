@@ -25,4 +25,3 @@ const mdp = dispatch => {
 
 export default connect(msp, mdp)(Searchbar);
 
-//no openmodal, closedmodal does not even show up
