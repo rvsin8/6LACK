@@ -41,7 +41,7 @@ export default class Searchbar extends React.Component {
 
   componentDidUpdate(prevProps) {
     //console.log('current props', this.props);
-    console.log("prev props", prevProps);
+    //console.log("prev props", prevProps);
     if (JSON.stringify(prevProps.channels) !== JSON.stringify(this.props.channels)) {
       console.log("UPDATING CHANNEL LIST NOWWW");
       this.setState({
