@@ -12,7 +12,8 @@ const msp = state => {
         //    currentUserEmail: state.entities.users[state.session.user.id].email
     };
 };
-
+//commit purposes
+//commit purposes
 
 const mdp = dispatch => {
 
