@@ -84,7 +84,7 @@ export default class Searchbar extends React.Component {
 
   render() {
 
-    console.log("LIST of channels", this.state.filteredChannelsArray);
+    //console.log("LIST of channels", this.state.filteredChannelsArray);
 
     const searchResults = (
       <>
