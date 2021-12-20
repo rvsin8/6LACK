@@ -43,6 +43,7 @@ export default class Searchbar extends React.Component {
   //dead forgot yesterday
   //or did i ?
   //i dead did smh
+  //and found out i got unfollowed :()
 
   componentDidUpdate(prevProps) {
     //console.log('current props', this.props);
