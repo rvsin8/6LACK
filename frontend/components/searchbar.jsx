@@ -40,10 +40,6 @@ export default class Searchbar extends React.Component {
   }
 
   //commit man commit
-  //dead forgot yesterday
-
-
-
 
   componentDidUpdate(prevProps) {
     //console.log('current props', this.props);
