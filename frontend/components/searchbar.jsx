@@ -32,7 +32,6 @@ export default class Searchbar extends React.Component {
     this.placeholderText =
       placeholderMessages[randomNum(placeholderMessages.length - 1)];
   }
-  //yer im back
 
   componentDidMount() {
     //console.log("channels list", this.props);
