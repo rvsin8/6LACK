@@ -2,11 +2,17 @@
 
 6lack is a lightweight clone of [Slack](https://www.slack.com), a popular chat application. Users can post messages to public channels or private Direct Messages.
 
-## Technologies
-- React/Redux
+### Impelmented Technologies:
+
+- HTML
+- CSS
+- SASS
+- JavaScript
+- Postgres
 - Ruby on Rails
-- PostgresQL
-- WebSockets
+- Webpack
+- React
+- Redux
 
 ## Features
 
