@@ -39,7 +39,7 @@ export default class Searchbar extends React.Component {
     this.setState({ filteredChannelsArray: Object.values(this.props.channels) });
   }
   //commit
-  //commit
+
   componentDidUpdate(prevProps) {
     //console.log('current props', this.props);
     //console.log("prev props", prevProps);
