@@ -12,7 +12,7 @@
 
 ### Realtime CRUD With Action Cable
 
-The meat and potatoes of any chat app is...well, chat. Users need to be able to create and update messages, and other users should be able to see those changes in realtime. To achieve that, I used Action Cable, Rails's built-in WebSockets library.
+Users need to be able to create and update messages, and other users should be able to see those changes in realtime. To achieve that, I used Action Cable, Rails's built-in WebSockets library.
 
 When a user creates a new message, a POST request is sent to the backend, a PostgreSQL database. The message is then sent out over a WebSocket channel to which all logged-in users are subscribed.
 
