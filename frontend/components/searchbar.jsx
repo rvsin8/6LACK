@@ -11,7 +11,7 @@ export default class Searchbar extends React.Component {
     super(props);
 
     this.state = { searchValue: "", filteredChannelsArray: [] };
-
+    //commit
     //console.log('props channels', this.props.channels);
 
     // this.filteredChannelsArray 
