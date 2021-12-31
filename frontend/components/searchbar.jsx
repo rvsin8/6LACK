@@ -12,7 +12,6 @@ export default class Searchbar extends React.Component {
 
     this.state = { searchValue: '', filteredChannelsArray: [] }
     //console.log('props channels', this.props.channels);
-    //oh
     // this.filteredChannelsArray
     const placeholderMessages = [
       'Search for your collaborations, find that song.',
