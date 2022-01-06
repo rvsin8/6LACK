@@ -119,7 +119,8 @@ export default class Searchbar extends React.Component {
       </>
     )
 
-    //commit push
+    //git add
+    //git push
 
     const noSearchResults = <div id="search-filler">Narrow your search</div>
 
