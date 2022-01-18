@@ -119,7 +119,7 @@ export default class Searchbar extends React.Component {
       </>
     )
 
-    //:)
+    //<3
 
     const noSearchResults = <div id="search-filler">Narrow your search</div>
 
