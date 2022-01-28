@@ -119,8 +119,6 @@ export default class Searchbar extends React.Component {
       </>
     )
 
-    //we
-
     const noSearchResults = <div id="search-filler">Narrow your search</div>
 
     //console.log('SearchValue', this.state.searchValue);
