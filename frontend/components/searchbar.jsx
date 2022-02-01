@@ -120,7 +120,7 @@ export default class Searchbar extends React.Component {
     )
 
     const noSearchResults = <div id="search-filler">Narrow your search</div>
-
+    //hehe
     //console.log('SearchValue', this.state.searchValue);
     //console.log('filered channels array', this.state.filteredChannelsArray);
     return (
