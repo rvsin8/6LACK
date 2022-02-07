@@ -15,7 +15,7 @@ export default class Searchbar extends React.Component {
     // this.filteredChannelsArray
     const placeholderMessages = [
       'Search for your collaborations, find that song.',
-      'Search for your collaborations, find the artist.',
+      'Search for your collaborations, find the artist.',ll
       'Search all across 6lack',
       'The music is somewhere...',
       'What do you want to search for today?',
