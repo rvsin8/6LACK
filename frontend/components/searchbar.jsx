@@ -74,7 +74,6 @@ export default class Searchbar extends React.Component {
   displayTitle(title) {
     const channelDisplayTitleArray = title.split(', ')
     const currentUserRemoved = channelDisplayTitleArray.filter(
-      //
       (user) => user !== this.props.currentUserEmail,
     )
     return currentUserRemoved.join(', ')
