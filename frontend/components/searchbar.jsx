@@ -69,7 +69,7 @@ export default class Searchbar extends React.Component {
         [type]: event.target.value,
       })
     }
-  }
+  } //lol
 
   displayTitle(title) {
     const channelDisplayTitleArray = title.split(', ')
