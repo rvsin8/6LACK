@@ -71,7 +71,7 @@ export default class Searchbar extends React.Component {
     }
   }
 
-  //crossfit gang dont bang
+  //cro
 
   displayTitle(title) {
     const channelDisplayTitleArray = title.split(', ')
