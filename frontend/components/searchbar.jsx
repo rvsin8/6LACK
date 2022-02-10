@@ -71,8 +71,6 @@ export default class Searchbar extends React.Component {
     }
   }
 
-  //crossfit gang dont bang
-
   displayTitle(title) {
     const channelDisplayTitleArray = title.split(', ')
     const currentUserRemoved = channelDisplayTitleArray.filter(
