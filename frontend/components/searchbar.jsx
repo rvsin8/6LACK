@@ -59,7 +59,7 @@ export default class Searchbar extends React.Component {
             .map((user) => user.id)
             .includes(this.props.currentUser.id);
         }) */
-      }) //
+      })
     }
   }
 
