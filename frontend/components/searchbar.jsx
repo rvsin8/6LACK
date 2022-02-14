@@ -62,7 +62,6 @@ export default class Searchbar extends React.Component {
       })
     }
   }
-  //
 
   handleInput(type) {
     return (event) => {
