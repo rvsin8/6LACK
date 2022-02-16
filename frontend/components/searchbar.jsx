@@ -103,7 +103,6 @@ export default class Searchbar extends React.Component {
               this.state.searchValue != ''
             ) {
               return (
-                //
                 <Link
                   onClick={() => this.props.closeModal()}
                   className="search-li"
