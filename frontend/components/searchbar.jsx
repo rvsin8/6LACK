@@ -98,7 +98,7 @@ export default class Searchbar extends React.Component {
             //console.log("channel Search", channel);
             if (
               this.displayTitle(channel.title)
-                .toLowerCase() //
+                .toLowerCase()
                 .startsWith(this.state.searchValue.toLowerCase()) &&
               this.state.searchValue != ''
             ) {
