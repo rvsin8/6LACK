@@ -95,7 +95,7 @@ export default class Searchbar extends React.Component {
               } else prefix = <i className="fas fa-lock"></i>
             } else prefix = '#'
 
-            //console.log("channel Search", channel); //
+            //console.log("channel Search", channel);
             if (
               this.displayTitle(channel.title)
                 .toLowerCase()
