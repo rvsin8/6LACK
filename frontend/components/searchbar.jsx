@@ -23,7 +23,7 @@ export default class Searchbar extends React.Component {
     ]
     const randomNum = (max) => {
       return Math.floor(Math.random() * max + 1)
-    } //
+    }
 
     this.placeholderText =
       placeholderMessages[randomNum(placeholderMessages.length - 1)]
