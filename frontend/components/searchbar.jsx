@@ -22,7 +22,7 @@ export default class Searchbar extends React.Component {
       'Type what you want to search for. 6lack will do the rest.',
     ]
     const randomNum = (max) => {
-      return Math.floor(Math.random() * max + 1)
+      return Math.floor(Math.random() * max + 1) //
     }
 
     this.placeholderText =
