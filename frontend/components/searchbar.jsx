@@ -19,7 +19,7 @@ export default class Searchbar extends React.Component {
       'Search all across 6lack',
       'The music is somewhere...',
       'What do you want to search for today?',
-      'Type what you want to search for. 6lack will do the rest.', //
+      'Type what you want to search for. 6lack will do the rest.',
     ]
     const randomNum = (max) => {
       return Math.floor(Math.random() * max + 1)
