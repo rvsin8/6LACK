@@ -10,7 +10,7 @@ export default class Searchbar extends React.Component {
     //https://www.blog4js.com/2020/10/07/why-is-super-deprecated-in-a-react-class-component/
     super(props)
 
-    this.state = { searchValue: '', filteredChannelsArray: [] }
+    this.state = { searchValue: '', filteredChannelsArray: [] } //
     //console.log('props channels', this.props.channels);
     // this.filteredChannelsArray
     const placeholderMessages = [
